@@ -3,7 +3,7 @@ hor = 0
 
 
 def moving(depht,hor):
-    i = True
+   
     while True:
         while True:
             x = input('Insert the tipology of movement(\n1 : down \n2 : up \n 3: forward \n0 : exit\n)\n')
@@ -31,10 +31,10 @@ def moving(depht,hor):
                hor += y     #forward
            
                 
-            print(depht, hor,'\n')  
+            print('Depht:',depht,'\nHorizontal :', hor,'\n')  
         else:
             break  
-
+    print('Final depht:',depht,'\nFinal horizontal :', hor,'\nDepht*Horizontal :', depht*hor,'\n')   
         
           
 moving(depht,hor)
