@@ -2,12 +2,14 @@
 
 with open('data.TXT', 'r') as f:
    
-    zero = [0,0,0,0,0]
-    one =  [0,0,0,0,0]
+    zero = []
+    one =  []
     
 
     for line in f:
         for i in range(0,len(line)-1):
+            zero.insert(i,0)
+            one.insert(i,0)
             if line[i] == '0':
                 zero[i] += 1
             else:
@@ -16,11 +18,12 @@ with open('data.TXT', 'r') as f:
 
     
 #creation of gamma
-    
-    gamma = ['0','0','0','0','0']
+    gamma = []
+    for i in range(0,len(line)-1):
+        gamma.insert(i,'0')
    
   
-    for i in range(0,len(zero)-1):
+    for i in range(0,len(gamma)-1):
         if zero[i] > one[i]:
             gamma[i] = '0'
         else:
@@ -30,10 +33,12 @@ with open('data.TXT', 'r') as f:
 
 
 #creation of epsylon
-    epsylon = ['0','0','0','0','0']  
+    epsylon = []  
     
+    for i in range(0,len(line)-1):
+        epsylon.insert(i,'0')
     
-    for i in range(0,len(zero)):
+    for i in range(0,len(epsylon)):
         if zero[i] < one[i]:
             epsylon[i] = '0'
         else:
