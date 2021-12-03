@@ -8,11 +8,12 @@ with open('data.TXT', 'r') as f:
 
     for line in f:
         for i in range(0,len(line)-1):
+            print(len(line))
             zero.insert(i,0)
             one.insert(i,0)
             if line[i] == '0':
                 zero[i] += 1
-            else:
+            elif line[i] == '1':
                 one[i] += 1
            
 
@@ -38,7 +39,7 @@ with open('data.TXT', 'r') as f:
     for i in range(0,len(line)-1):
         epsylon.insert(i,'0')
     
-    for i in range(0,len(epsylon)):
+    for i in range(0,len(epsylon)-1):
         if zero[i] < one[i]:
             epsylon[i] = '0'
         else:
